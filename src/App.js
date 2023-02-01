@@ -13,16 +13,19 @@ class App extends React.Component {
 	grabQuote = () => {
 		axios.get('https://api.adviceslip.com/adivce');
 			.then((response) => {
-			const { advice } = response.data.slip
-				console.log(advice);
+				const { advice } = response.data.slip
+				
+				this.setState({quote: advice});
 			})
 			.catch((error) => {
 				console.log(error);
 			});
 	}	
 	render() {
+		const {quote} = this.state;
+
 		 return (
-			<h1> Hello </h1>
+			<h1> {quote}  </h1>
 		 );
 	}
 }
