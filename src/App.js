@@ -34,7 +34,7 @@ class App extends React.Component {
 						<a href="https://www.linkedin.com/in/ryangormican/">
 							<Icon icon="mdi:linkedin" color="#0e76a8" width="40" />
 						</a>
-						<a href="https://github.com/RyanGormican/Quoted">
+						<a href="https://github.com/RyanGormican/QuotedFor">
 							<Icon icon="mdi:github" color="white" width="40" />
 						</a>
 						</span>
