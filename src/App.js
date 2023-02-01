@@ -23,25 +23,23 @@ class App extends React.Component {
 			});
 	}	
 	render() {
-		const {quote} = this.state;
+		const {quote} = this.state.advice;
 
 		 return (
 			<div className ="app">
 				<div className="card">
 					<h1 className ="heading">{quote}</h1>
-					<button className="button" onClick={this.grabQuote}>
+					<span>
 						<a href="https://github.com/RyanGormican/Quoted">
 							<Icon icon="mdi:github" color="white" width="40" />
 						</a>
-						<span>Generate Quote</span>
+						<button className="button" onClick={this.grabQuote}>
+							<span>Generate Quote</span>
+						</button>
 						<a href="https://github.com/RyanGormican/Quoted">
 							<Icon icon="mdi:github" color="white" width="40" />
 						</a>
-					</button>
-					<div>
-						
-						
-					</div>
+					</span>
 				</div>
 			</div>
 		 );
