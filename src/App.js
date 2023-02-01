@@ -5,7 +5,7 @@ import { Icon } from '@iconify/react';
 import './App.css';
 
 class App extends React.Component {
-	state = { quote: '' };
+	state = { quote: '', }
 
 	componentDidMount() {
 		this.grabQuote();
