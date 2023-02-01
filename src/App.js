@@ -7,8 +7,18 @@ class App extends React.Component {
 	state = { quote: '' };
 
 	componentDidMount() {
-		console.log('Test');
+		
 	}
+
+	grabQuote = () => {
+		axios.get('https://api.adviceslip.com/adivce');
+			.then(() => {
+
+			})
+			.catch(() => {
+
+			});
+	}	
 	render() {
 		 return (
 			<h1> Hello </h1>
