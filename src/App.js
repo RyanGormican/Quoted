@@ -25,7 +25,11 @@ class App extends React.Component {
 		const {quote} = this.state;
 
 		 return (
-			<h1> {quote}  </h1>
+			<div className ="app">
+				<div className="card">
+					<h1 className ="heading">{quote}</h1>
+				</div>
+			</div>
 		 );
 	}
 }
