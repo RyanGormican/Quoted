@@ -5,7 +5,7 @@ import { Icon } from '@iconify/react';
 import './App.css';
 
 class App extends React.Component {
-	state = { advice: '', }
+	state = { advice: '',}
 
 	componentDidMount() {
 		this.grabQuote();
@@ -23,23 +23,21 @@ class App extends React.Component {
 			});
 	}	
 	render() {
-		const {quote} = this.state.advice;
-
 		 return (
 			<div className ="app">
 				<div className="card">
-					<h1 className ="heading">{quote}</h1>
-					<span>
-						<a href="https://github.com/RyanGormican/Quoted">
-							<Icon icon="mdi:github" color="white" width="40" />
-						</a>
+					<h1 className ="heading">{this.state.advice}</h1>
+					<div>
 						<button className="button" onClick={this.grabQuote}>
 							<span>Generate Quote</span>
 						</button>
+						<a href="https://www.linkedin.com/in/ryangormican/">
+							<Icon icon="mdi:linkedin" color="#0e76a8" width="40" />
+						</a>
 						<a href="https://github.com/RyanGormican/Quoted">
 							<Icon icon="mdi:github" color="white" width="40" />
 						</a>
-					</span>
+					</div>
 				</div>
 			</div>
 		 );
