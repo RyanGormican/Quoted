@@ -5,7 +5,7 @@ import { Icon } from '@iconify/react';
 import './App.css';
 
 class App extends React.Component {
-	state = { quote: '', }
+	state = { advice: '', }
 
 	componentDidMount() {
 		this.grabQuote();
@@ -16,7 +16,7 @@ class App extends React.Component {
 			.then((response) => {
 				const { advice } = response.data.slip
 				
-				this.setState({quote: advice});
+				this.setState({ advice });
 			})
 			.catch((error) => {
 				console.log(error);
