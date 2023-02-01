@@ -12,7 +12,7 @@ class App extends React.Component {
 	}
 
 	grabQuote = () => {
-		axios.get('https://api.adviceslip.com/adivce')
+		axios.get('https://api.adviceslip.com/advice')
 			.then((response) => {
 				const { advice } = response.data.slip
 				
@@ -27,7 +27,6 @@ class App extends React.Component {
 			<div className ="app">
 				<div className="card">
 					<h1 className ="heading">{this.state.advice}</h1>
-					<div>
 						<button className="button" onClick={this.grabQuote}>
 							<span>Generate Quote</span>
 						</button>
@@ -37,7 +36,6 @@ class App extends React.Component {
 						<a href="https://github.com/RyanGormican/Quoted">
 							<Icon icon="mdi:github" color="white" width="40" />
 						</a>
-					</div>
 				</div>
 			</div>
 		 );
