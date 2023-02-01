@@ -13,7 +13,8 @@ class App extends React.Component {
 	grabQuote = () => {
 		axios.get('https://api.adviceslip.com/adivce');
 			.then((response) => {
-				console.log(response);
+			const { advice } = response.data.slip
+				console.log(advice);
 			})
 			.catch((error) => {
 				console.log(error);
