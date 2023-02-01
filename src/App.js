@@ -28,7 +28,7 @@ class App extends React.Component {
 			<div className ="app">
 				<div className="card">
 					<h1 className ="heading">{quote}</h1>
-					<button className="button">
+					<button className="button" onClick={this.grabQuote}>
 						<span>Generate Quote</span>
 					</button>
 				</div>
