@@ -7,16 +7,16 @@ class App extends React.Component {
 	state = { quote: '' };
 
 	componentDidMount() {
-		
+		this.grabQuote();
 	}
 
 	grabQuote = () => {
 		axios.get('https://api.adviceslip.com/adivce');
-			.then(() => {
-
+			.then((response) => {
+				console.log(response);
 			})
-			.catch(() => {
-
+			.catch((error) => {
+				console.log(error);
 			});
 	}	
 	render() {
