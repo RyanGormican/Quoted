@@ -5,7 +5,7 @@ import { Icon } from '@iconify/react';
 import './App.css';
 
 class App extends React.Component {
-	state = { advice: '',}
+	state = { quote: '',}
 
 	componentDidMount() {
 		this.grabQuote();
@@ -16,7 +16,7 @@ class App extends React.Component {
 			.then((response) => {
 				const { advice } = response.data.slip
 				
-				this.setState({ advice });
+				this.setState({ quote: advice });
 			})
 			.catch((error) => {
 				console.log(error);
@@ -26,7 +26,7 @@ class App extends React.Component {
 		 return (
 			<div className ="app">
 				<div className="card">
-					<h1 className ="heading">{this.state.advice}</h1>
+					<h1 className ="heading">{this.state.quote}</h1>
 						<button className="button" onClick={this.grabQuote}>
 							<span>Generate Quote</span>
 						</button>
